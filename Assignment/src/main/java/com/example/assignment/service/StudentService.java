@@ -4,6 +4,8 @@ import com.example.assignment.model.Student;
 import com.example.assignment.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.sql.SQLOutput;
 import java.util.List;
 
 @Service
@@ -28,6 +30,7 @@ public class StudentService {
 
     public String removeStudent(Integer id) {
         studentRepository.deleteById(id);
+        System.out.println("Hi all from removeStudent method");
         return "Deleted";
     }
 
