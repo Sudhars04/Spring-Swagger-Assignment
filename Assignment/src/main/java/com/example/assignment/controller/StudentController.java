@@ -31,6 +31,7 @@ public class StudentController {
     @Operation(summary = "Remove a Student's record")
     @DeleteMapping("/removeUser")
     public String removeStudent(@Parameter(description = "Enter Student Id") @RequestParam int id) {
+        System.out.println("Hi from controller method");
         return studentService.removeStudent(id);
     }
 
